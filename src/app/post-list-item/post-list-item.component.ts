@@ -6,18 +6,15 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./post-list-item.component.scss']
 })
 
-
 export class PostListItemComponent {
 
-  @Input() post: object; 
+  @Input() post; 
 
-  addloveIts(post) {
+  addloveIts() {
     this.post.loveIts++;
   }
 
-  removeloveIts(post) {
+  removeloveIts() {
     this.post.loveIts--;
   }
-
-  constructor() { }
 }
