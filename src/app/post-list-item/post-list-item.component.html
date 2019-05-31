@@ -1,0 +1,8 @@
+<div [ngClass]="{'list-group-item-success': post.loveIts > 0, 'list-group-item-danger': post.loveIts < 0}" class="list-group-item">
+  <h2 style="display: inline;">{{ post.title }}</h2>
+  <p class="pull-right" style="display: inline;">{{ post.date | date: 'short' }}</p>
+  <p>{{ post.content }}</p>
+  <button class="btn btn-success" (click)="addloveIts()">Love it !</button>
+  <button class="btn btn-danger" style="margin-left: 1%" (click)="removeloveIts()">Don't love it !</button>
+  <span class="badge badge-primary badge-pill">{{ post.loveIts }}</span>
+</div>
